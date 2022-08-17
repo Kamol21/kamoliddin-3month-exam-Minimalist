@@ -82,7 +82,7 @@
   padding: 17px 24px;
   @include typography-styles(normal, 12px, 14px, 400, center, #fff);
   background-color: #203a4c;
-  border: none;
+  border: 1px solid transparent;
 }
 
 
@@ -105,11 +105,5 @@
     max-width: 635px;
     width: 100%;
   }
-  .contact-input__button {
-    &:hover {
-      background-image: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    }
-  }
-
-
+    
 }
