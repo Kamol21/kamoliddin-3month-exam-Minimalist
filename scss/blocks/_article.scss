@@ -28,7 +28,48 @@
   border: 1px solid var(--main-text-black-color);
 }
 
-@media only screen and (min-width: 700px) {
+
+@media only screen and (min-width: 700px) and (max-width: 750px) {
+  .contact-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 48px 0 96px 0;
+  }
+
+  .contact-section__title-box {
+    width: 71%;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+
+  .contact-section__title {
+    display: flex;
+    align-items: center;
+    font-family: "Ibarra Real Nova";
+    @include typography-styles(normal, 40px, 42px, 700, start, var(--main-text-black-color));
+    letter-spacing: -0.357143px;
+    text-align: start;
+    &::after {
+      display: inline-block;
+      width: 90%;
+      height: 1px;
+      margin-left: 20px;
+      background-color: var(--main-text-black-color);
+      mix-blend-mode: normal;
+      opacity: 0.15;
+      content: "";
+    }
+  }
+
+  .contact-section__button {
+    margin-left: auto;
+  }
+
+}
+
+
+@media only screen and (min-width: 751px) {
   .contact-section {
     width: 100%;
     display: flex;
@@ -67,6 +108,44 @@
 
 }
 
+@media only screen and (min-width: 830px) and (max-width: 999px) {
+  .contact-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 48px 0 96px 0;
+  }
+
+  .contact-section__title-box {
+    width: 76%;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+
+  .contact-section__title {
+    display: flex;
+    align-items: center;
+    font-family: "Ibarra Real Nova";
+    @include typography-styles(normal, 40px, 42px, 700, start, var(--main-text-black-color));
+    letter-spacing: -0.357143px;
+    text-align: start;
+    &::after {
+      display: inline-block;
+      width: 78%;
+      height: 1px;
+      margin-left: 20px;
+      background-color: var(--main-text-black-color);
+      mix-blend-mode: normal;
+      opacity: 0.15;
+      content: "";
+    }
+  }
+
+  .contact-section__button {
+    margin-left: auto;
+  }
+
+}
 
 @media only screen and (min-width: 1000px) {
   .contact-section {
