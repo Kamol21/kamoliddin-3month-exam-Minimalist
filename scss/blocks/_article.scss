@@ -1,0 +1,114 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 0 80px 0;
+}
+
+.contact-section__title-box {
+  margin-bottom: 40px;
+}
+
+.contact-section__title {
+  font-family: "Ibarra Real Nova";
+  @include typography-styles(normal, 40px, 42px, 700, center, var(--main-text-black-color));
+  letter-spacing: -0.357143px;
+}
+
+.contact-section__button {
+  display: inline-block;
+  @include link-unstyle;
+  padding: 17px 34px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-text-black-color);
+  border: 1px solid var(--main-text-black-color);
+}
+
+@media only screen and (min-width: 700px) {
+  .contact-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 48px 0 96px 0;
+  }
+
+  .contact-section__title-box {
+    width: 75%;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+
+  .contact-section__title {
+    display: flex;
+    align-items: center;
+    font-family: "Ibarra Real Nova";
+    @include typography-styles(normal, 40px, 42px, 700, start, var(--main-text-black-color));
+    letter-spacing: -0.357143px;
+    text-align: start;
+    &::after {
+      display: inline-block;
+      width: 60%;
+      height: 1px;
+      margin-left: 20px;
+      background-color: var(--main-text-black-color);
+      mix-blend-mode: normal;
+      opacity: 0.15;
+      content: "";
+    }
+  }
+
+  .contact-section__button {
+    margin-left: auto;
+  }
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .contact-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 75px 0 150px 0;
+  }
+
+  .contact-section__title-box {
+    width: 81%;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+
+  .contact-section__title {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    font-family: "Ibarra Real Nova";
+    @include typography-styles(normal, 40px, 42px, 700, start, var(--main-text-black-color));
+    letter-spacing: -0.357143px;
+
+    &::after {
+      display: inline-block;
+      width: 110%;
+      height: 1px;
+      margin-left: 20px;
+      background-color: var(--main-text-black-color);
+      mix-blend-mode: normal;
+      opacity: 0.15;
+      content: "";
+    }
+  }
+  .contact-section__button {
+    margin-left: auto;
+    transition: 0.4s;
+    &:hover {
+      background-color: var(--main-text-black-color);
+      color: #fff;
+      transition: 0.2s;
+    }
+  }
+
+}

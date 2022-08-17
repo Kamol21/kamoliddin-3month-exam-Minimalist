@@ -1,0 +1,115 @@
+.contact-input {
+  padding: 32px 0 96px 0;
+  border-top: 1px solid rgba(51, 50, 61, 0.15);
+}
+
+.contact-input__title {
+  margin-bottom: 24px;
+  font-family: "Ibarra Real Nova";
+  @include typography-styles(normal, 40px, 42px, 700, start, var(--main-text-black-color));
+}
+
+.contact-input__form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-input__label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  @include typography-styles(normal, 13px, 30px, 700, start, rgba(51, 50, 61, 0.8));
+}
+
+.contact-input__input-line {
+  margin-bottom: 4px;
+  padding: 10px 0 10px 16px;
+  @include typography-styles(normal, 13px, 30px, 400, start, var(--main-text-black-color));
+  background-color: rgba(51, 50, 61, 0.1);
+  opacity: 0.4;
+  border: 1px solid transparent;
+  resize: none;
+
+  &:focus {
+    background-color: rgba(51, 50, 61, 0.1);
+    color: var(--main-text-black-color);
+    opacity: 1;
+    outline: 1px solid $green-text-active;
+  }
+
+  &:invalid:not(:placeholder-shown, :focus) {
+    border: 1px solid #f43030;
+    animation: shake 500ms;
+  }
+
+  &:not(:placeholder-shown):not(:focus):invalid+.contact-input__invalid {
+    visibility: inherit;
+    color: #f43030;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: rotate(5deg)
+    }
+
+    25% {
+      transform: rotate(-5deg)
+    }
+
+    50% {
+      transform: rotate(5deg)
+    }
+
+    75% {
+      transform: rotate(-5deg)
+    }
+
+    100% {
+      transform: rotate(0deg)
+    }
+
+  }
+}
+
+.contact-input__invalid {
+  visibility: hidden;
+  @include typography-styles(normal, 10px, 12px, 700, start, #f43030);
+}
+
+.contact-input__button {
+  padding: 17px 24px;
+  @include typography-styles(normal, 12px, 14px, 400, center, #fff);
+  background-color: #203a4c;
+  border: none;
+}
+
+
+@media only screen and (min-width: 700px) {
+  .contact-input {
+    padding: 32px 0 96px 0;
+  }
+  
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .contact-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 0 109px 0;
+  }
+
+  .contact-input__form-box {
+    max-width: 635px;
+    width: 100%;
+  }
+  .contact-input__button {
+    &:hover {
+      background-image: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    }
+  }
+
+
+}

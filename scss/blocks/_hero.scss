@@ -1,0 +1,121 @@
+.hero-section {
+  padding-top: 330px;
+  background-image: url("../images/hero-bg-mobile-min.jpg");
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  @include bgRetinaImages {
+    background-image: url("../images/hero-bg-mobile@2x-min.jpg");
+  }
+}
+
+.hero-section__title {
+  margin-bottom: 32px;
+  font-family: "Ibarra Real Nova";
+  @include typography-styles(normal, 40px, 42px, 700, start, var(--main-text-black-color));
+  letter-spacing: -0.357143px;
+}
+
+.hero-section__button {
+  @include link-unstyle;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 40px 0 0;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #203a4c;
+  transition: all 0.3s;
+  behavior: smooth;
+
+  &::before {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-right: 40px;
+    fill: black;
+    background-image: url("../images/button-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &:hover {
+    background-color: $green-text-active;
+  }
+
+  &:hover:before {
+    background-image: url("../images/button-icon-hover.svg");
+  }
+}
+
+@media only screen and (min-width: 410px) and (max-width: 680px) {
+  .hero-section__word-box {
+    max-width: 340px;
+    background-color: #fafafa;
+  }
+
+}
+
+@media only screen and (min-width: 681px) {
+  .hero-section {
+    background-image: url("../images/hero-bg-tablet-min.jpg");
+    background-size: cover;
+
+    @include bgRetinaImages {
+      background-image: url("../images/hero-bg-tablet@2x-min.jpg");
+    }
+  }
+
+  .hero-section__word-box {
+    max-width: 460px;
+    padding: 56px 0 0 0;
+    background-color: #fafafa;
+  }
+
+  .hero-section__title {
+    margin-bottom: 48px;
+  }
+
+}
+
+@media only screen and (min-width: 1100px) {
+  .hero-section {
+    padding-top: 240px;
+    background-image: url("../images/hero-bg-min.jpg");
+    background-size: contain;
+
+    @include bgRetinaImages {
+      background-image: url("../images/hero-bg@2x-min.jpg");
+    }
+  }
+
+  .hero-section__word-box {
+    max-width: 444px;
+    padding: 56px 56px 0 0;
+    background-color: #fafafa;
+  }
+
+  .hero-section__title {
+    margin-bottom: 53px;
+    font-family: "Ibarra Real Nova";
+    @include typography-styles(normal, 50px, 50px, 700, start, var(--main-text-black-color));
+    letter-spacing: -0.357143px;
+  }
+
+  .hero-section__button {
+    &:hover {
+      background-color: $green-text-active;
+    }
+
+    &:hover:before {
+      background-image: url("../images/button-icon-hover.svg");
+    }
+  }
+
+
+}

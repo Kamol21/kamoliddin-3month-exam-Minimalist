@@ -1,0 +1,48 @@
+.contact-hero {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0 32px 0;
+  border-top: 1px solid rgba(51, 50, 61, 0.15);
+}
+.contact-hero__title {
+  margin-bottom: 24px;
+  font-family: "Ibarra Real Nova";
+  @include typography-styles(normal, 40px, 42px, 700, start, var(--main-text-black-color));
+  letter-spacing: -0.357143px;
+}
+.contact-hero__text {
+  margin-bottom: 24px;
+  @include typography-styles( normal, 15px, 30px, 400, start, var(--main-text-black-color));
+  opacity: 0.8;
+}
+.contact-hero__icons-box {
+  display: flex;
+  align-items: center
+}
+.contact-hero__icons-link {
+  @include link-unstyle;
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .contact-hero {
+    padding: 32px 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .contact-hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 48px 0;
+  }
+  .contact-hero__text-icons-box {
+    max-width: 635px;
+  }
+  .contact-hero__text {
+    font-size: 16px;
+  }
+}

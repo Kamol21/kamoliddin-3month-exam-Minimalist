@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalist-exam</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="site-header">
+        <a href="index.html">
+          <img src="./images/logo-black.svg" width="60" height="32" alt="Minimalist site logo">
+        </a>
+        <nav class="navbar">
+          <ol class="site-header__list">
+            <li class="site-header__items">
+              <a class="site-header__links site-header__links--active" href="index.html">
+                HOME
+              </a>
+            </li>
+            <li class="site-header__items">
+              <a class="site-header__links" href="portfolio.html">
+                PORTFOLIO
+              </a>
+            </li>
+            <li class="site-header__items">
+              <a class="site-header__links" href="contact.html">
+                CONTACT ME
+              </a>
+            </li>
+          </ol>
+        </nav>
+        <button class="site-header__button"></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <section>
+      <div class="container">
+        <div class="hero-section">
+          <div class="hero-section__word-box">
+            <h1 class="hero-section__title">
+              Hey, I’m Alex Spencer and I love building beautiful websites
+            </h1>
+            <a class="hero-section__button" href="#about-me">
+              ABOUT ME
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-me">
+      <div class="container">
+        <div class="about-section">
+          <picture>
+            <!-- WEBP -->
+            <source type="image/webp" media="(max-width: 699px)" srcset="
+                ./images/bratishka-mob.webp 1x,
+                ./images/bratishka-mob@2x.webp 2x
+              ">
+            <source type="image/webp" media="(max-width: 1000px)" srcset="
+                ./images/bratishka-tablet.webp 1x,
+                ./images/bratishka-tablet@2x.webp 2x
+              ">
+            <source type="image/webp" srcset="
+                ./images/bratishka.webp 1x,
+                ./images/bratishka@2x.webp 2x
+              ">
+            <!-- default imgs -->
+            <source media="(max-width: 699px)" srcset="
+                ./images/bratishka-mob-min.jpg 1x, 
+                ./images/bratishka-mob@2x-min.jpg 2x
+              ">
+            <source media="(max-width: 1000px)" srcset="
+                ./images/bratishka-tablet-min.jpg 1x,
+                ./images/bratishka-tablet@2x-min.jpg 2x
+              ">
+            <img src="./images/bratishka-min.jpg.jpg" srcset="
+                ./images/bratishka-min.jpg 1x,
+                ./images/bratishka-min@2x-min.jpg 2x
+              " alt="site admin picture">
+          </picture>
+          <div class="about-section__word-box">
+            <h2 class="about-section__title">
+              About Me
+            </h2>
+            <p class="about-section__text">
+              I’m a junior front-end developer looking for a new role in an exciting company. I focus on writing
+              accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I
+              mostly use React, but I can adapt to whatever tools are required. I’m based in London, UK, but I’m happy
+              working remotely and have experience in remote teams. When I’m not coding, you’ll find me outdoors. I love
+              being out in nature whether that’s going for a walk, run or cycling. I’d love you to check out my work.
+            </p>
+            <a class="about-section__button" href="portfolio.html">
+              GO TO PORTFOLIO
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <article>
+      <div class="container">
+        <div class="contact-section">
+          <div class="contact-section__title-box">
+            <h2 class="contact-section__title">
+              Interested in doing a project together?
+            </h2>
+          </div>
+          <a class="contact-section__button" href="contact.html">
+            CONTACT ME
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__content-box">
+        <a href="index.html">
+          <img src="./images/logo-white.svg" width="60" height="32" alt="Minimalist site logo">
+        </a>
+        <ol class="site-footer__list">
+          <li class="site-footer__items">
+            <a class="site-footer__items-link" href="index.html">
+              HOME
+            </a>
+          </li>
+          <li class="site-footer__items">
+            <a class="site-footer__items-link" href="portfolio.html">
+              PORTFOLIO
+            </a>
+          </li>
+          <li class="site-footer__items">
+            <a class="site-footer__items-link" href="contact.html">
+              CONTACT ME
+            </a>
+          </li>
+        </ol>
+        <div class="site-footer__icons-box">
+          <a class="site-footer__icons-link" href="#" target="_blank">
+            <img src="./images/github.svg" width="25" height="24" alt="github link">
+          </a>
+          <a class="site-footer__icons-link" href="#" target="_blank">
+            <img src="./images/twitter.svg" width="24" height="20" alt="twitter link">
+          </a>
+          <a class="site-footer__icons-link" href="#" target="_blank">
+            <img src="./images/linkedin.svg" width="25" height="24" alt="linkedin link">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+.site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 32px 0 40px 0;
+}
+
+.navbar {
+  display: none;
+  position: absolute;
+  top: 85%;
+  right: 0%;
+  width: 223px;
+  padding: 40px 0;
+  background-color: var(--main-text-black-color);
+}
+
+.open {
+  overflow: hidden;
+}
+
+.open .navbar {
+  display: block;
+}
+
+.site-header__list {
+  @include list-unstyle;
+  @include flexbox(normal, center, column);
+}
+
+.site-header__items {
+  &:not(:last-child) {
+    margin-bottom: 32px
+  }
+
+}
+
+.site-header__links {
+  @include link-unstyle;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+
+.site-header__button {
+  width: 24px;
+  height: 13px;
+  margin-left: auto;
+  background-image: url("../images/hamburger.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+}
+
+.open .site-header__button {
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/close.svg");
+}
+
+
+@media only screen and (min-width: 500px) {
+  .site-header {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 64px 0 47px 0;
+  }
+
+  .navbar {
+    display: inline-block;
+    position: static;
+    top: 0%;
+    right: 0%;
+    width: inherit;
+    margin-left: auto;
+    padding: 0px 0px;
+    background-color: transparent;
+  }
+
+  .site-header__list {
+    @include list-unstyle;
+    @include flexbox(normal, center, row);
+  }
+
+  .site-header__items {
+    &:not(:last-child) {
+      margin-bottom: 0px;
+      margin-right: 42px;
+    }
+
+  }
+
+  .site-header__links {
+    @include link-unstyle;
+    letter-spacing: 2px;
+    @include typography-styles(normal, 12px, 14px, 400, start, var(--main-text-black-color))
+  }
+
+  .site-header__links--active {
+    color: $green-text-active;
+  }
+
+  .site-header__button {
+    display: none;
+    width: 24px;
+    height: 13px;
+    margin-left: auto;
+    background-image: url("../images/hamburger.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+  }
+  .open {
+    overflow: scroll;
+  }
+
+}
+
+@media only screen and (min-width: 1000px) {
+  .site-header {
+    padding: 64px 0;
+  }
+  .site-header__links--active {
+    color: $green-text-active;
+  }
+  .open {
+    overflow: scroll;
+  }
+
+}
